@@ -1,0 +1,196 @@
+/*play video button jump */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(material/bkgroundfinal.png);
+    background-size: cover;  /* need change */
+    position: relative;
+}
+.loading {
+    width: 20vw;
+    height: 1em;
+    position: absolute;
+    left: 46.3vw;
+    top:16vh;
+    color: white;
+    font-size: 2em;
+    font-family: monospace;
+    animation: flash 1s ease infinite;
+}
+@keyframes flash {
+    50% {
+        opacity: 0.3;
+    }
+}
+video {
+    background-color: black;
+}
+div:not(.loading){
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.wheel {
+    position: absolute;
+    top: 27.5vh;
+    right: 33vw;
+    width: 34vw;
+    animation: turnWheelTurn 5s linear infinite;
+}
+
+@keyframes turnWheelTurn {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cph {
+    position: absolute;
+    top: 9.5vh;
+    left: 30.7vw;
+    width: 41vw;
+    z-index: 1;
+    animation: zoomInCPH .5s ease-in forwards;
+}
+
+@keyframes zoomInCPH {
+    to {
+        transform:scale(1.3) translate(-2vw, -3vh);
+    }
+}
+
+.citywalk {
+    position: absolute;
+    top: 56vh;
+    right: 30vw;
+    width: 38vw;
+    z-index: 2;
+    animation: zoomOut .5s ease-out forwards;
+
+}
+
+@keyframes zoomOut {
+    from {transform: translateY(0);
+    }
+    to {
+        transform: translate(20vw, -37vh)
+            scale(.4)
+    }}
+
+.flyaway {
+    animation: flyaway .5s ease-in forwards;
+}
+@keyframes flyaway {
+    to {
+        transform: translateY(-60vh);
+    }
+}
+
+.flyback {
+    animation: flyback .5s ease-in forwards;
+}
+@keyframes flyback {
+    to {
+        transform: translateY(60vh);
+    }
+}
+
+
+.bkgtop {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.bkgbottom {
+    position: absolute;
+    top: 56vh;
+    left: -1.27vw;
+    z-index: 1;
+    width: 102vw;
+    height: 45vh;
+}
+.flyaway2 {
+    animation: flyaway2 .5s ease-in forwards;
+}
+
+@keyframes flyaway2 {
+    90% {
+        transform:translateY(100vh);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: rotateX(90deg)
+    }
+}
+
+@keyframes scrollOuts {to{
+    transform:rotateY(90deg);
+        transform:translateX(10vh)
+       transform-origin: bottom;
+    }}
+.play {
+    background-color: transparent;
+    background-image: url(material/play6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: .23vw;
+    height: .1vw;
+    border: 0;
+    padding: 0;
+    z-index: 3;
+    position: absolute;
+    top: 74vh;
+    left: 52.3vw;
+    cursor: pointer;
+    animation: zoomIn .5s ease-in forwards;
+}
+@keyframes zoomIn {
+    from {
+        transform: translate(0, 0);
+    }
+    to  {
+        transform: scale(108);
+    }
+}
+
+.bloop {
+    background-color: transparent;
+    background-image: url(material/bloop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 0;
+    width: .5vw;
+    height: .1vh;
+    z-index: 3;
+    font-size: 2em;
+    position: absolute;
+    top: 87.4vh;
+    left: 50vw;
+    cursor: pointer;
+    animation: zoomIn2 .5s ease-in forwards;
+}
+@keyframes zoomIn2 {
+    from {
+        transform: translate(0, 0)
+    }
+    to {
+        transform: scale(69) translate(.135vw, .02vh);
+    }
+}
+
+video {
+    height: 100vh;
+    margin: auto;
+    width: 100vw;
+}
+
+.hide {
+    display: none;
+}

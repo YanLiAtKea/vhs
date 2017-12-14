@@ -1,0 +1,39 @@
+<!--
+cph with out glow, tilt angle
+bgbottom: black border on top; tilt; size; transition; grid lines move upwards; not centered
+bgtop: blue area bigger than before
+?? shake intro video?
+bloopers button add background?
+-->
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Walk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <video class="intro" src="material/WEBSITE-VIDEO.mp4" type="video/mp4" width="1920" autoplay></video>
+    <video class="rough hide" src="material/vhs-citywalk.mp4" type="video/mp4"></video>
+    <video class="bloopVideo hide" src="material/bloopers-vhs-project.mp4" type="video/mp4"></video>
+    <div class="hide">
+
+        <img class="bkgtop" src="material/bkgroundfinal.png" alt="background">
+        <img class="bkgbottom" src="material/WEBSITE%20BACKGROUND%20PNG_00000.png" alt="background">
+        <img class="wheel" src="material/BIKEWHEEL_00000.png" alt="wheel">
+        <div  id="both">
+            <img class="cph" src="material/CPH%20PNG_00000.png" alt="cph">
+            <img class="citywalk" src="material/WHEEL%20PNG_00000.png">
+        </div>
+        <button class="play noWheel"></button>
+        <button class="bloop noWheel"></button>
+
+    </div>
+    <div class="loading hide">loading</div>
+        <script src="script.js"></script>
+</body>
+</html>
